@@ -10,17 +10,17 @@ class Config:
     MAIL_PORT = 25
     MAIL_USE_TLS = True
     # MAIL_USE_SSL = True
-    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    MAIL_USERNAME = os.getenv("MAIL_USERNAME")
+    MAIL_PASSWORD = os.getenv("MAIL_PASSWORD")
 
     AFG_BLOG_MAIL_SUBJECT_PREFIX = '[AimForGoogleBlog]'
     AFG_BLOG_MAIL_SENDER = 'AimForGoogle <support@aimforgoogle.com>'
-    AFG_ADMIN = os.environ.get('AFG_ADMIN')
+    AFG_ADMIN = os.getenv('AFG_ADMIN')
 
-    MONGO_URI = os.environ.get('MONGO_URI')
-    MONGO_DBNAME = os.environ.get('MONGO_DBNAME')
-    MONGO_USERNAME = os.environ.get('MONGO_USERNAME')
-    MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD')
+    MONGO_URI = os.getenv('MONGO_URI')
+    MONGO_DBNAME = os.getenv('MONGO_DBNAME')
+    MONGO_USERNAME = os.getenv('MONGO_USERNAME')
+    MONGO_PASSWORD = os.getenv('MONGO_PASSWORD')
 
 
     @staticmethod
