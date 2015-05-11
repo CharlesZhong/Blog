@@ -17,6 +17,12 @@ class Config:
     AFG_BLOG_MAIL_SENDER = 'AimForGoogle <support@aimforgoogle.com>'
     AFG_ADMIN = os.environ.get('AFG_ADMIN')
 
+    MONGO_URI = os.environ.get('MONGO_URI')
+    MONGO_DBNAME = os.environ.get('MONGO_DBNAME')
+    MONGO_USERNAME = os.environ.get('MONGO_USERNAME')
+    MONGO_PASSWORD = os.environ.get('MONGO_PASSWORD')
+
+
     @staticmethod
     def init_app(app):
         pass

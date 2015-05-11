@@ -4,12 +4,14 @@ from flask.ext.mail import Mail
 from flask.ext.moment import Moment
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.login import LoginManager
+from flask.ext.pymongo import PyMongo
 from config import config
 
 bootstrap = Bootstrap()
 mail = Mail()
 moment = Moment()
 db = SQLAlchemy()
+mongo = PyMongo()
 
 login_manager = LoginManager()
 login_manager.session_protection = 'strong'
@@ -26,6 +28,8 @@ def create_app(config_name):
     moment.init_app(app)
     db.init_app(app)
     login_manager.init_app(app)
+    mongo.init_app(app)
+
 
     from .main import main as main_blueprint
     app.register_blueprint(main_blueprint)
@@ -35,5 +39,9 @@ def create_app(config_name):
 
     from .api_1_0 import api as api_1_0_blueprint
     app.register_blueprint(api_1_0_blueprint, url_prefix='/api/v1.0')
+
+    from .hupu import hupu as hupu_blueprint
+    app.register_blueprint(hupu_blueprint, url_prefix='/hupu')
+
 
     return app

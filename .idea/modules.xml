@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Blog.iml" filepath="$PROJECT_DIR$/.idea/Blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../HupuMiner/.idea/HupuMiner.iml" filepath="$PROJECT_DIR$/../HupuMiner/.idea/HupuMiner.iml" />
     </modules>
   </component>
 </project>

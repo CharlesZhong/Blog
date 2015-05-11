@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% import "_macros.html" as macros %}
+
+{% block page_content %}
+
+<table id="pl">
+    {% for item in BXJItems %}
+    <tr>
+        <td class="light">
+            {{ item.light_replay }}
+        </td>
+
+        <td class="view">
+            {{item.reply_count}} / {{ item.browse_count }}
+        </td>
+
+        <td class="title">
+            <a id href="http://bbs.hupu.com{{ item.title_page_url }}">{{ item.title }}</a>
+        </td>
+        <td class="author">
+            <a id href={{ item.username_url }}>{{ item.username }}</a>
+        </td>
+
+        <td class="create-time">
+            {{ item.create_date }}
+        </td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+
+<div class="pagination">
+    {{ macros.pagination_widget(pagination, '.index') }}
+</div>
+
+
+{% endblock %}
