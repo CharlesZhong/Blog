@@ -64,3 +64,7 @@ def edit_profile_admin(id):
 @main.route('/about', methods=['GET'])
 def about():
     return render_template('about.html')
+
+@main.route('/new_index', methods=['GET'])
+def new_index():
+    return render_template('new_index.html')
